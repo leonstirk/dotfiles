@@ -13,6 +13,8 @@
 #  Sarunas Vancevicius original: http://www.redbrick.dcu.ie/~svan/configs/screenrc
 #  Mike Perry original:  http://fscked.org/writings/225notes/unix/.screenrc
 
+shell -$SHELL
+
 ## -----------------------------------------------------------------------------------------
 ## -- 1) Set variables and keybindings for emacs compatibility (remapping Ctrl-A to Ctrl-T)
 ## -----------------------------------------------------------------------------------------
@@ -84,9 +86,8 @@ sorendition "+b kG"
 # 2.2) hardstatus = navigation bar @ bottom
 hardstatus alwayslastline "%H %-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%<"  
 
-# 2.3) Autoload two screen tabs for emacs/bash.
-screen -t emacs 0
-screen -t bash 1
+# 2.3) Autoload one screen tab.
+screen -t bash 0
 
 # 2.4) Description of the keywords used in hardstatus
 # caption always "%?%F%{-b bc}%:%{-b bb}%?%C|%D|%M %d|%H%?%F%{+u wb}%? %L=%-Lw%45>%{+b by}%n%f* %t%{-}%+Lw%-0<"

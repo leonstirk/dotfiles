@@ -169,30 +169,36 @@ PS1="\[\033[0;34m\][\u@\h:\w]$\[\033[0m\]"
 ## -----------------------
 
 # 2.1) Safety
-alias rm="rm -i"
-alias mv="mv -i"
-alias cp="cp -i"
+alias rm="rm -iv"
+alias mv="mv -iv"
+alias cp="cp -iv"
 set -o noclobber
 
 # 2.2) Listing, directories, and motion
-alias ll="ls -alrtF --color"
+alias ll="ls -alrtF"
 alias la="ls -A"
 alias l="ls -CF"
 alias dir='ls --color=auto --format=vertical'
 alias vdir='ls --color=auto --format=long'
 alias m='less'
+alias cd..='cd ..'
 alias ..='cd ..'
 alias ...='cd ..;cd ..'
-alias md='mkdir'
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+alias md='mkdir -pv'
 alias cl='clear'
-alias du='du -ch --max-depth=1'
+alias du='du -ch'
 alias treeacl='tree -A -C -L 2'
 
 # 2.3) Text and editor commands
-alias em='emacs -nw'     # No X11 windows
-alias eqq='emacs -nw -Q' # No config and no X11
-export EDITOR='emacs -nw'
-export VISUAL='emacs -nw' 
+alias em="emacs -nw"     # No X11 windows
+alias eqq="emacs -nw -Q" # No config and no X11
+alias emacs="emacs -nw"
+export EDITOR="emacs -nw"
+export VISUAL="emacs -nw" 
 
 # 2.4) grep options
 export GREP_OPTIONS='--color=auto'
