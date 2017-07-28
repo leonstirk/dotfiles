@@ -1,7 +1,7 @@
 # .bashrc_custom file
 
 alias crone="env VISUAL=nano crontab -e"
-alias ll="ls -alrtF"
+alias ll="ls --color=always -alrtF"
 alias subl="subl -w"
 
 export CLICOLOR=1

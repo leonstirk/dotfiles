@@ -28,6 +28,7 @@
 (setq show-trailing-whitespace t)
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
+(setq tab-width 4)
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -76,3 +77,11 @@
 (require 'jade-mode)    
 (add-to-list 'auto-mode-alist '("\\.styl$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+
+;; ---------------------------
+;; -- TS Mode configuration --
+;; ---------------------------
+
+(load "ts-mode.el")
+(setq auto-mode-alist (cons '("\\.ts$" . ts-mode) auto-mode-alist))
+(autoload 'ts-mode "ts-mode" "TypoScript file editing mode." t)
