@@ -3,6 +3,7 @@
 alias crone="env VISUAL=nano crontab -e"
 alias ll="ls --color=always -alrtF"
 alias python=python3
+alias py=python3
 alias pip=pip3
 
 export CLICOLOR=1
