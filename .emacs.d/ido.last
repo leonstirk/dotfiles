@@ -1,0 +1,31 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/deflatormaus/Desktop/projects/" . "article/")
+ ("/Users/deflatormaus/Desktop/" . "projects/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/deflatormaus/Desktop/projects/article/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "scratch.R"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/deflatormaus/Desktop/projects/article/" (26532 19038 0 0) "article.pdf" "ecta_sample.tex" "article.Rnw" "ecta_template.tex" "econsocart.cls" ".git/" "article.bbl" "build" "econsocart.cfg" "scratch_2.R" "sdid_simulation.R" "figure_sample.eps" "_config.yml" "ecta-fullname.bst" "figures/" "article.out" "spatial_scratch.R" "article.brf" "notes/" "gitBackup.sh" "ecta_sample.pdf" "article.tex" "README.md" "figure_sample.pdf" "figure/" "ecta_sample_final.pdf" "article_scratch.Rnw" "references.bib" "phi_mc_results/" "scratch.R" "LICENSE" "article.blg" "literature/" "article.log" ".DS_Store" "build.R" "article.aux" ".Rhistory" "../" "./")
+
+ ("/Users/deflatormaus/Desktop/projects/" (26532 19966 0 0) "transport_for_london/" "earthquakes/" "christchurch/" "presentation/" "article/" "trading_economics/" "green_island_fresh_choice/" "rstatsDataBackup/" "macro/" "RUC/" "datasets/" "diss/" "tensorflow_test/" "determinants_of_price_growth_auckland/" "nz_census_data/" ".DS_Store" "scraping/" "snippets/" "r_packages/" "../" "./")
+
+ ("/Users/deflatormaus/Desktop/" (26532 23566 0 0) ".Rproj.user/" "cv/" "examination/" "budgets/" "cats_in_sweaters/" "emerson_st/" "projects/" ".localized" "test/" ".DS_Store" "personal/" ".Rhistory" "../" "./")
+
+ ("/Users/deflatormaus/Desktop/test/" (26532 23565 0 0) "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

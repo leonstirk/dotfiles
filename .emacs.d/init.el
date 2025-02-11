@@ -6,7 +6,7 @@
 ;; ---------------------
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 ;;(add-to-list 'load-path (expand-file-name "~/.emacs.d") t)
-(require 'cl)
+(require 'cl-lib)
 (require 'ido)
 (require 'ffap)
 (require 'uniquify)
@@ -63,6 +63,7 @@
 (global-set-key "\M-i" 'back-window)
 (global-set-key "\C-z" 'zap-to-char)
 (global-set-key "\C-h" 'backward-delete-char)
+(global-set-key "\C-i" 'help-command)
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)
 (global-set-key "\M-u" 'zap-to-char)
@@ -89,4 +90,26 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(ess)))
+ '(package-selected-packages '(web-mode auctex ess)))
+
+
+;; AucTeX
+(setq TeX-auto-save t)
+(setq TeX-parse-self t)
+(setq-default TeX-master nil)
+
+
+;; Aspell
+(setq ispell-program-name "/opt/homebrew/bin/aspell") ;; use Aspell (apple silicon)
+
+;; MHTML
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . mhtml-mode))
+
+;; Web mode for HTML
+;; (package-install 'web-mode)
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-enable-auto-closing t)
+
+
+;; force python to use readline
+(setq python-shell-interpreter-args "-i")
