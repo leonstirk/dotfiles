@@ -109,7 +109,14 @@
 ;; (package-install 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (setq web-mode-enable-auto-closing t)
+(defun my-web-mode-hook ()
+  "Custom settings for `web-mode`."
+  (setq web-mode-markup-indent-offset 2)  ;; HTML indentation
+  (setq web-mode-css-indent-offset 2)     ;; CSS indentation
+  (setq web-mode-code-indent-offset 2)    ;; JS/PHP inside HTML
+  )
 
+(add-hook 'web-mode-hook 'my-web-mode-hook)
 
 ;; force python to use readline
 (setq python-shell-interpreter-args "-i")
