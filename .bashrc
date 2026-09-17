@@ -68,7 +68,7 @@
 #  Conversely, if the default group name is *different* from the username
 #  AND the user id is greater than 99, we're on the server, and set umask
 #  022 for easy collaborative editing.
-if [ "`id -gn`" == "`id -un`" -a `id -u` -gt 99 ]; then
+if [ "$(id -gn 2>/dev/null)" == "$(id -un)" -a "$(id -u)" -gt 99 ]; then
 	umask 002
 else
 	umask 022
@@ -225,4 +225,7 @@ export LC_ALL=POSIX
 
 ## Define any user-specific variables you want here.
 source ~/.bashrc_custom
-eval "$(/opt/homebrew/bin/brew shellenv)"
+
+if [ -x /opt/homebrew/bin/brew ]; then
+   eval "$(/opt/homebrew/bin/brew shellenv)"
+fi

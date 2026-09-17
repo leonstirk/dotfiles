@@ -13,4 +13,7 @@ export LSCOLORS=ExFxCxDxBxegedabagacad
 export PATH="/Library/TeX/texbin:$PATH"
 
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-complete -C "$(which aws_completer)" aws
+
+if command -v aws_completer &> /dev/null; then
+   complete -C "$(which aws_completer)" aws
+fi

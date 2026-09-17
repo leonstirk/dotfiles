@@ -43,6 +43,12 @@
 #      --norc option. The --rcfile file option will force Bash to read and
 #      execute commands from file instead of ~/.bashrc.
 
+# On Windows/Git Bash, force login shells to start in the real Windows home
+# (AD/domain policy can otherwise launch mintty in a mapped network drive)
+if [ -n "$MSYSTEM" ]; then
+   cd "$HOME"
+fi
+
 ## -----------------------
 ## -- 1) Import .bashrc --
 ## -----------------------
@@ -63,4 +69,6 @@ export PATH=/usr/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+if [ -x /opt/homebrew/bin/brew ]; then
+   eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
